@@ -49,6 +49,21 @@ const galleryImages = [
     category: "apres",
     title: "Après - Sièges Citroën",
   },
+  // Nouvelles images lampe voiture
+  {
+    id: 7,
+    src: "/images/gallery/lampeavant1.jpg",
+    alt: "Avant nettoyage - Lampe voiture",
+    category: "avant",
+    title: "Avant - Lampe voiture",
+  },
+  {
+    id: 8,
+    src: "/images/gallery/lampeapres1.jpg",
+    alt: "Après nettoyage - Lampe voiture",
+    category: "apres",
+    title: "Après - Lampe voiture",
+  },
 ]
 
 export function Gallery() {

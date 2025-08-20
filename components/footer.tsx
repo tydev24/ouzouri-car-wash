@@ -1,4 +1,4 @@
-import { Car, Phone, MapPin, Clock } from "lucide-react"
+import { Car, Phone, MapPin, Clock, Mail  } from "lucide-react"
 import Image from "next/image"
 
 export function Footer() {
@@ -43,6 +43,12 @@ export function Footer() {
                   07 81 63 32 88
                 </a>
               </div>
+    <div className="flex items-center space-x-3">
+      <Mail className="w-4 h-4 text-[#35C8F4] flex-shrink-0" />
+      <a href="mailto:ouzouri.97@outlook.com" className="text-gray-300 hover:text-[#35C8F4] transition-colors">
+        ouzouri.97@outlook.com
+      </a>
+    </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="w-4 h-4 text-[#35C8F4] flex-shrink-0 mt-1" />
                 <div className="text-gray-300">

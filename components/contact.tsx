@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { MessageCircle, Phone, MapPin, Clock, Send, Star } from "lucide-react"
+import { MessageCircle, Phone, MapPin, Clock, Send, Star, Mail  } from "lucide-react"
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -35,7 +35,7 @@ Date souhaitée: ${formData.date}
 Heure souhaitée: ${formData.heure}
 Message: ${formData.message}`
 
-    const whatsappUrl = `https://wa.me/33781633288?text=${encodeURIComponent(message)}`
+    const whatsappUrl = `https://wa.me/330781633288?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, "_blank")
   }
 
@@ -133,12 +133,12 @@ Message: ${formData.message}`
                       <SelectValue placeholder="Choisissez un service" />
                     </SelectTrigger>
                     <SelectContent className="bg-gray-800 border-gray-700 backdrop-blur-sm">
-                      <SelectItem value="standard">Nettoyage Standard</SelectItem>
-                      <SelectItem value="premium">Soin Luxe Premium</SelectItem>
-                      <SelectItem value="livraison">Service Récupération/Livraison</SelectItem>
-                      <SelectItem value="moteur">Nettoyage Moteur</SelectItem>
-                      <SelectItem value="ceramique">Protection Céramique</SelectItem>
-                      <SelectItem value="produits">Produits d'entretien</SelectItem>
+                      <SelectItem value="standard">Intérieur Simple+</SelectItem>
+                      <SelectItem value="premium">Sièges et Plafon</SelectItem>
+                      <SelectItem value="livraison">Express (Extérieur complet)</SelectItem>
+                      <SelectItem value="moteur">Luxury (Extérieur complet + Intérieur)</SelectItem>
+                      <SelectItem value="ceramique">Nettoyage de canapé</SelectItem>
+                      <SelectItem value="produits">Nettoyage de tapis</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -152,6 +152,7 @@ Message: ${formData.message}`
                       id="date"
                       type="date"
                       value={formData.date}
+                      min={new Date().toISOString().split("T")[0]} // empêche les dates passées
                       onChange={(e) => handleInputChange("date", e.target.value)}
                       className="bg-gray-800/50 border-gray-700/50 text-white focus:border-[#35C8F4] focus:ring-2 focus:ring-[#35C8F4]/20 transition-all duration-300 h-12 rounded-lg backdrop-blur-sm"
                     />
