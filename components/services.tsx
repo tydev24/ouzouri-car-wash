@@ -22,7 +22,7 @@ const services = [
   {
     icon: Truck,
     title: "Express (Extérieur complet)",
-    description: "Lavage carrosserie – Séchage – Jantes – Vitres – Plastiques – Aspiration moquettes et tapis",
+    description: "Lavage carrosserie – Séchage – Jantes – Plastiques – Aspiration moquettes et tapis",
     features: ["Durée : 45 minutes"],
     price: "30€",
   },
