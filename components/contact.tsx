@@ -12,6 +12,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { MessageCircle, Phone, MapPin, Clock, Send, Star, Mail  } from "lucide-react"
 
 export function Contact() {
+  // URL de la fiche Google My Business du client
+  const GOOGLE_BUSINESS_URL = "https://share.google/jDYriACOp8xTUiNEl"
+
   const [formData, setFormData] = useState({
     nom: "",
     email: "",
@@ -133,12 +136,12 @@ Message: ${formData.message}`
                       <SelectValue placeholder="Choisissez un service" />
                     </SelectTrigger>
                     <SelectContent className="bg-gray-800 border-gray-700 backdrop-blur-sm">
-                      <SelectItem value="standard">Intérieur Simple+</SelectItem>
-                      <SelectItem value="premium">Sièges et Plafon</SelectItem>
-                      <SelectItem value="livraison">Express (Extérieur complet)</SelectItem>
-                      <SelectItem value="moteur">Luxury (Extérieur complet + Intérieur)</SelectItem>
-                      <SelectItem value="ceramique">Nettoyage de canapé</SelectItem>
-                      <SelectItem value="produits">Nettoyage de tapis</SelectItem>
+                      <SelectItem value="simple">Intérieur Simple+</SelectItem>
+                      <SelectItem value="sieges_plafond">Formule Sièges et Plafond</SelectItem>
+                      <SelectItem value="luxury">Formule Luxury Intérieur Complet Extérieur</SelectItem>
+                      <SelectItem value="premium_luxury">Formule Premium Luxury</SelectItem>
+                      <SelectItem value="canape">Nettoyage de canapé</SelectItem>
+                      <SelectItem value="tapis">Nettoyage de tapis</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -269,6 +272,38 @@ Message: ${formData.message}`
                     className="rounded-lg"
                   />
                 </div>
+              </CardContent>
+            </Card>
+            {/* Google Reviews Card */}
+            <Card className="bg-gradient-to-br from-black to-gray-900 border border-gray-800/50 shadow-2xl">
+              <CardContent className="p-6">
+                <h4 className="font-semibold text-white mb-2 text-lg flex items-center gap-3">
+                  <Star className="w-6 h-6 text-[#35C8F4]" />
+                  Avis Google
+                </h4>
+                <p className="text-gray-300 mb-4">Vos avis nous aident énormément — merci de partager votre expérience.</p>
+
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                  <a
+                    href={GOOGLE_BUSINESS_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto inline-flex items-center justify-center bg-gradient-to-r from-[#35C8F4] to-[#2bb5e0] text-black font-bold py-3 px-5 rounded-lg shadow-md hover:opacity-95 transition-all"
+                  >
+                    Voir la fiche
+                  </a>
+
+                  <a
+                    href={GOOGLE_BUSINESS_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto inline-flex items-center justify-center border border-gray-700 text-gray-300 py-3 px-5 rounded-lg hover:border-[#35C8F4] hover:text-[#35C8F4] transition-all"
+                  >
+                    Laisser un avis
+                  </a>
+                </div>
+
+                <p className="text-gray-500 text-xs mt-3">Remplacez la constante <code className="text-gray-300">GOOGLE_BUSINESS_URL</code> par l'URL réelle de la fiche Google.</p>
               </CardContent>
             </Card>
           </div>

@@ -4,7 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { X } from "lucide-react"
+import { X, Star } from "lucide-react"
 
 const galleryImages = [
   {
@@ -67,13 +67,16 @@ const galleryImages = [
 ]
 
 export function Gallery() {
+  // URL de la fiche Google (remplacez si besoin)
+  const GOOGLE_BUSINESS_URL = "https://share.google/jDYriACOp8xTUiNEl"
   const [selectedImage, setSelectedImage] = useState<(typeof galleryImages)[0] | null>(null)
   const [filter, setFilter] = useState<"all" | "avant" | "apres">("all")
 
   const filteredImages = filter === "all" ? galleryImages : galleryImages.filter((img) => img.category === filter)
 
   return (
-    <section id="galerie" className="py-20 bg-gray-900">
+    <>
+      <section id="galerie" className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-display font-bold text-4xl md:text-5xl text-white mb-6">Galerie - Nos Réalisations</h2>
@@ -177,6 +180,57 @@ export function Gallery() {
           </div>
         )}
       </div>
-    </section>
+        </section>
+
+      {/* Google Reviews Section - Professional layout */}
+      <section id="avis-google" className="py-20 bg-black border-t border-gray-800">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            {/* Left: Title + CTAs */}
+            <div>
+              <h2 className="font-display font-bold text-3xl md:text-4xl text-white mb-3">Ce que disent nos clients</h2>
+              <p className="text-gray-300 mb-6 max-w-xl">
+                Votre retour compte — aidez-nous à continuer d'améliorer nos services en laissant un avis sur notre fiche
+                Google. Cela prend quelques secondes et fait une grande différence pour une petite entreprise locale.
+              </p>
+
+              <div className="flex flex-wrap items-center gap-4">
+                <a
+                  href={GOOGLE_BUSINESS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 bg-gradient-to-r from-[#35C8F4] to-[#2bb5e0] text-black font-semibold py-3 px-5 rounded-lg shadow-md hover:opacity-95 transition"
+                  aria-label="Voir la fiche Google Ouvrir dans un nouvel onglet"
+                >
+                  <Star className="w-5 h-5 text-black" />
+                  Voir la fiche
+                </a>
+
+                <a
+                  href={GOOGLE_BUSINESS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 border border-gray-700 text-gray-300 py-3 px-5 rounded-lg hover:border-[#35C8F4] hover:text-[#35C8F4] transition"
+                  aria-label="Laisser un avis Google Ouvrir dans un nouvel onglet"
+                >
+                  Laisser un avis
+                </a>
+              </div>
+
+              <p className="text-gray-500 text-sm mt-4">Merci de soutenir Ouzouri Car'Wash — chaque avis compte.</p>
+            </div>
+
+            {/* Right: Neutral card pointing to Google (no duplicate CTAs) */}
+            <div className="bg-gradient-to-br from-gray-900/60 to-black border border-gray-800 rounded-xl p-6 text-center">
+              <div className="flex flex-col items-center justify-center">
+                <Star className="w-10 h-10 text-[#35C8F4] mb-3" />
+                <h3 className="text-white text-xl font-semibold mb-2">Consultez nos avis</h3>
+                <p className="text-gray-400">Les avis de nos clients sont disponibles sur notre fiche Google. Merci de votre confiance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   )
 }

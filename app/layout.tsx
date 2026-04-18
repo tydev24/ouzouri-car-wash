@@ -22,6 +22,12 @@ export const metadata: Metadata = {
     "Service de nettoyage automobile professionnel à Lorient. Nettoyage intérieur/extérieur, soin luxe, service à domicile. Vente de parfums et produits d'entretien.",
   keywords: "lavage auto Lorient, nettoyage voiture, car wash, detailing auto, Ouzouri",
     generator: 'v0.app'
+  ,
+  icons: {
+    icon: '/images/logo.png',
+    shortcut: '/images/logo.png',
+    apple: '/images/logo.png'
+  }
 }
 
 export default function RootLayout({
@@ -31,6 +37,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${inter.variable} ${montserrat.variable} antialiased`}>
+      <head>
+        <link rel="icon" href="/images/logo.png" />
+      </head>
       <body className="bg-black text-white font-sans">{children}</body>
     </html>
   )

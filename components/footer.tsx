@@ -86,6 +86,23 @@ export function Footer() {
           <p className="text-gray-400 text-sm">
             © 2025 Ouzouri Car'Wash. Tous droits réservés. | Nettoyage automobile professionnel à Lorient
           </p>
+          <div className="flex items-center justify-center gap-4 mt-2">
+            <a href="/mentions-legales" className="text-gray-400 text-sm hover:text-[#35C8F4] hover:underline">
+              Mentions légales
+            </a>
+            <span className="text-gray-600">|</span>
+            <p className="text-gray-400 text-sm m-0">
+              Réalisé par{' '}
+              <a
+                href="https://ty-dev.site"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#35C8F4] hover:underline"
+              >
+                TY DEV
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
