@@ -9,47 +9,47 @@ import { X, Star } from "lucide-react"
 const galleryImages = [
   {
     id: 1,
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/avant%201-HIqvw2jqZOKCXQH1usld6m6Tb0Kjin.webp",
+    src: "/images/gallery/avant-1.webp",
     alt: "Avant nettoyage - Intérieur Fiat 500",
     category: "avant",
     title: "Avant - Intérieur Fiat 500",
   },
   {
     id: 2,
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/apres%201-FlmiA6TKtSbL3V9RCDrqcjykHpiXDB.webp",
+    src: "/images/gallery/apres-1.webp",
     alt: "Après nettoyage - Intérieur Fiat 500",
     category: "apres",
     title: "Après - Intérieur Fiat 500",
   },
   {
     id: 3,
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/avant2-PGl17VNyvDfSvy8JiEOs5TLOUxQmxw.webp",
+    src: "/images/gallery/avant-2.webp",
     alt: "Avant nettoyage - Intérieur Peugeot",
     category: "avant",
     title: "Avant - Intérieur Peugeot",
   },
   {
     id: 4,
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/apres2-dCQBkUQD0BE1CHvy5DSSFz1Iku6Kw1.webp",
+    src: "/images/gallery/apres-2.webp",
     alt: "Après nettoyage - Intérieur Peugeot",
     category: "apres",
     title: "Après - Intérieur Peugeot",
   },
   {
     id: 5,
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/avant3-F50T8KipXuyZn8quvYwwlh5KGJvk0c.webp",
+    src: "/images/gallery/avant-3.webp",
     alt: "Avant nettoyage - Sièges Citroën",
     category: "avant",
     title: "Avant - Sièges Citroën",
   },
   {
     id: 6,
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/apres3-C1d4ZgbUnY9fGplKQd4G2p8zVcl4PX.webp",
+    src: "/images/gallery/apres-3.webp",
     alt: "Après nettoyage - Sièges Citroën",
     category: "apres",
     title: "Après - Sièges Citroën",
   },
-  // Nouvelles images lampe voiture
+  // Images lampe voiture
   {
     id: 7,
     src: "/images/gallery/lampeavant1.jpg",
@@ -63,6 +63,63 @@ const galleryImages = [
     alt: "Après nettoyage - Lampe voiture",
     category: "apres",
     title: "Après - Lampe voiture",
+  },
+  // Nouvelles réalisations
+  {
+    id: 9,
+    src: "/images/gallery/avant1.jpg",
+    alt: "Avant nettoyage - Intérieur véhicule",
+    category: "avant",
+    title: "Avant - Réalisation 1",
+  },
+  {
+    id: 10,
+    src: "/images/gallery/apres1.jpg",
+    alt: "Après nettoyage - Intérieur véhicule",
+    category: "apres",
+    title: "Après - Réalisation 1",
+  },
+  {
+    id: 11,
+    src: "/images/gallery/avant2.jpg",
+    alt: "Avant nettoyage - Jantes & Détails",
+    category: "avant",
+    title: "Avant - Réalisation 2",
+  },
+  {
+    id: 12,
+    src: "/images/gallery/apres2.jpg",
+    alt: "Après nettoyage - Jantes & Détails",
+    category: "apres",
+    title: "Après - Réalisation 2",
+  },
+  {
+    id: 13,
+    src: "/images/gallery/avant3.jpg",
+    alt: "Avant nettoyage - Habitacle",
+    category: "avant",
+    title: "Avant - Réalisation 3",
+  },
+  {
+    id: 14,
+    src: "/images/gallery/apres3.jpg",
+    alt: "Après nettoyage - Habitacle",
+    category: "apres",
+    title: "Après - Réalisation 3",
+  },
+  {
+    id: 15,
+    src: "/images/gallery/avant4.jpg",
+    alt: "Avant nettoyage - Finitions",
+    category: "avant",
+    title: "Avant - Réalisation 4",
+  },
+  {
+    id: 16,
+    src: "/images/gallery/apres4.jpg",
+    alt: "Après nettoyage - Finitions",
+    category: "apres",
+    title: "Après - Réalisation 4",
   },
 ]
 
