@@ -1,5 +1,6 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
+import { VideoPresentation } from "@/components/video-presentation"
 import { Services } from "@/components/services"
 import { WhyChooseUs } from "@/components/why-choose-us"
 import { Gallery } from "@/components/gallery"
@@ -13,6 +14,7 @@ export default function HomePage() {
       <Header />
       <Hero />
       <Services />
+      <VideoPresentation />
       <WhyChooseUs />
       <Gallery />
       <About />
